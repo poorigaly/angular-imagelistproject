@@ -1,0 +1,50 @@
+$mdc-theme-primary: #1565c0;
+$mdc-theme-secondary: #388e3c;
+$mdc-theme-background: #fff;
+
+@import "~@angular-mdc/theme/material";
+
+.demo-content {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 15px;
+
+  h3 {
+    margin-top: .3em;
+  }
+}
+
+.demo-content--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-content--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px 0 10px 0;
+}
+
+//
+// Image List
+//
+
+.standard-image-list {
+  @include mdc-image-list-aspect(4.5); // Images are 3:2
+  @include mdc-image-list-standard-columns(1);
+}
+
+.masonry-image-list {
+  @include mdc-image-list-masonry-columns(1);
+}
+
+@media (max-width: 599px) {
+  .standard-image-list {
+    @include mdc-image-list-standard-columns(3);
+  }
+
+  .masonry-image-list {
+    @include mdc-image-list-masonry-columns(3);
+  }
+}
