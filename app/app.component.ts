@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+declare var require: any
 
 @Component({
   selector: 'app-root',
@@ -15,4 +16,7 @@ export class AppComponent {
     { image: 'https://material-components-web.appspot.com/images/photos/2x3/3.jpg' },
 
   ];
+
+
+  imgname= require("./image1.PNG");
 }
